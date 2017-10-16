@@ -9,13 +9,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     [Range(0.1f, 3)]
     private float _waypointActionRadius;
-
+    
     private Rigidbody _rigidbody;
     private Transform[] _waypoints;
     private int _waypointIndex;
     private Vector3 _targetPosition;
     private bool _reachedEndOfPath;
 
+    public int lifeValue = 1;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -44,8 +45,11 @@ public class EnemyMovement : MonoBehaviour
                 }
                 else
                 {
+
                     _reachedEndOfPath = true;
                     print("Reached End Of Path");
+                    LifeCountdown.lifes -= lifeValue;
+                    Destroy(gameObject);
                 }
             }
         }
