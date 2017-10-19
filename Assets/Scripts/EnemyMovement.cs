@@ -45,7 +45,6 @@ public class EnemyMovement : MonoBehaviour
                 }
                 else
                 {
-
                     _reachedEndOfPath = true;
                     print("Reached End Of Path");
                     LifeCountdown.lifes -= lifeValue;

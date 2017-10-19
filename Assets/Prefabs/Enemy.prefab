@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23398579679790144}
   - component: {fileID: 54183342946205246}
   - component: {fileID: 114062099390177898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 2
   _waypointActionRadius: 3
+  lifeValue: 10
